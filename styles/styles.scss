@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-one: #024059;
+  --color-tow: #026873;
+  --color-tree: #04bf8a;
+  --color-four: #025940;
+  --color-five: #03a64a;
+  --color-grey: #e6e6e6;
+  --color-black: #000000;
+}
+
+body {
+  background-color: var(--color-one);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+header{
+  height: 100vh;
+  color: var(--color-grey);
+  overflow: hidden;
+   
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 18rem;
+}
