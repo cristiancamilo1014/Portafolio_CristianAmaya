@@ -42,3 +42,30 @@ section {
   top: 0;
   padding: 3rem 18rem;
 }
+
+.section{
+  transform: translateY(-100%) scale(0);
+  transition: all .4s ease-out;
+  background-color: var(--color-one);
+}
+
+.sec1{
+  display: none;
+  transform: translate(0) scale(1);
+  background-color: var(--color-tow);
+}
+.sec2{
+  display: none;
+  transform: translate(0) scale(1);
+  background-color: var(--color-tree);
+}
+.sec3{
+  display: none;
+  transform: translate(0) scale(1);
+  background-color: var(--color-four);
+}
+.sec4{
+  display: none;
+  transform: translate(0) scale(1);
+  background-color: var(--color-five);
+}
