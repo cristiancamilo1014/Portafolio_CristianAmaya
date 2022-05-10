@@ -48,41 +48,64 @@ section {
 .section {
   -webkit-transform: translateY(-100%) scale(0);
           transform: translateY(-100%) scale(0);
-  -webkit-transition: all .4s ease-out;
-  transition: all .4s ease-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   background-color: var(--color-one);
 }
 
 .sec1 {
   display: none;
-  -webkit-transform: translate(0) scale(1);
-          transform: translate(0) scale(1);
-  background-color: var(--color-tow);
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
 }
 
 .sec2 {
   display: none;
-  -webkit-transform: translate(0) scale(1);
-          transform: translate(0) scale(1);
-  background-color: var(--color-tree);
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-color: black;
 }
 
 .sec3 {
   display: none;
-  -webkit-transform: translate(0) scale(1);
-          transform: translate(0) scale(1);
-  background-color: var(--color-four);
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-color: yellow;
 }
 
 .sec4 {
   display: none;
-  -webkit-transform: translate(0) scale(1);
-          transform: translate(0) scale(1);
-  background-color: var(--color-five);
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .active {
   display: block;
+  -webkit-animation: scaleAnim 1s ease-in-out;
+          animation: scaleAnim 1s ease-in-out;
+}
+
+@-webkit-keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scale(0);
+            transform: translateY(-100%) scale(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(0);
+            transform: translateY(0) scale(0);
+  }
+}
+
+@keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scale(0);
+            transform: translateY(-100%) scale(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(0);
+            transform: translateY(0) scale(0);
+  }
 }
 
 .controlls {
@@ -100,9 +123,6 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }

@@ -46,33 +46,45 @@ section {
 
 .section{
   transform: translateY(-100%) scale(0);
-  transition: all .4s ease-out;
+  transition: all .4s ease-in-out;
   background-color: var(--color-one);
+  
 }
 
 .sec1{
   display: none;
-  transform: translate(0) scale(1);
-  background-color: var(--color-tow);
+  transform: translateY(0) scale(1);
+  
 }
 .sec2{
   display: none;
-  transform: translate(0) scale(1);
-  background-color: var(--color-tree);
+  transform: translateY(0) scale(1);
+  background-color: black;
+  
 }
 .sec3{
   display: none;
-  transform: translate(0) scale(1);
-  background-color: var(--color-four);
+  transform: translateY(0) scale(1);
+  background-color: yellow;
 }
 .sec4{
   display: none;
-  transform: translate(0) scale(1);
-  background-color: var(--color-five);
+  transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .active{
   display: block;
+  animation: scaleAnim 1s ease-in-out;
+  @keyframes scaleAnim {
+    0%{
+      transform: translateY(-100%) scale(0);
+    }
+    100%{
+      transform: translateY(0) scale(0);
+    }
+    
+  }
 }
 
 //Controles iconos
@@ -85,7 +97,6 @@ section {
  display: flex;
  flex-direction: column;
  justify-content: center;
- align-items: center;
  transform: translateY(-50%);
   .active-btn{
     background-color: var(--color-five) !important;
@@ -108,7 +119,7 @@ section {
     box-shadow: var(--box-shadow-1);
       i{
         font-size: 1.3rem;
-        color: var(--color-grey);
+        color: var(--color-grey) ;
         pointer-events: none;
       }
   }
