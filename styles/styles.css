@@ -163,4 +163,94 @@ section {
   color: var(--color-grey);
   pointer-events: none;
 }
+
+/*Header - Encabezado*/
+.header-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+
+.header-content .left-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header-content .left-header .h-shape {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tow);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 42% 0, 81% 100%, 0% 100%);
+          clip-path: polygon(0 0, 42% 0, 81% 100%, 0% 100%);
+}
+
+.header-content .left-header .image {
+  width: 65%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.header-content .left-header .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.header-content .left-header .image img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.header-content .right-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 10rem;
+}
+
+.header-content .right-header .name {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.header-content .right-header .name span {
+  color: var(--color-tree);
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+.header-content .right-header .name p {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/*Boton CV*/
 /*# sourceMappingURL=styles.css.map */
