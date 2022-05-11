@@ -365,7 +365,7 @@ section {
 .about-stats {
   padding-bottom: 4rem;
 
-    .progress-bars {
+  .progress-bars {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
@@ -429,6 +429,7 @@ section {
           .git {
             width: 80%;
           }
+          
         }
       }
     }
@@ -441,7 +442,7 @@ section {
   font-size: 2rem;
   text-align:  center;
   position: relative;
-  padding: 1.5rem 0;}
+  padding: 1.5rem 0;
   &::before {
     content: " ";
     left: 50%;
@@ -449,5 +450,43 @@ section {
     width: 40%;
     height: 1px;
     background-color: var(--color-grey-50);
-    transform: translateX(-50%);
+    transform: translateX(-50%);    
+  }    
+}
+
+/*OPORTUNIDADES LABORALES*/
+.timeline{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+  color: var(--color-grey);
+}.timeline-item{
+  position: relative;
+  padding-left: 2.5rem;
+  border-left: 1px solid var(--color-grey);
+  .tl-icon{
+    position: absolute;
+    left: -27px;
+    color: var(--color-grey);
+    top: 0;
+    background-color: var(--color-tree);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+      font-size: 1.3rem;
+    }
+  }
+  .tl-duration{
+    padding: .2rem .6rem;
+    background-color: var(--color-grey-50);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
 }

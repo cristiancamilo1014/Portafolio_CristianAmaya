@@ -446,26 +446,6 @@ section {
   padding-bottom: 4rem;
 }
 
-.about-stats .stat-title {
-  color: var(--color-grey);
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  position: relative;
-  padding: 1.5rem 0;
-}
-
-.about-stats .stat-title::before {
-  content: " ";
-  left: 50%;
-  top: 0;
-  width: 40%;
-  height: 1px;
-  background-color: var(--color-grey-50);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
 .about-stats .progress-bars {
   display: -ms-grid;
   display: grid;
@@ -554,5 +534,66 @@ section {
   text-align: center;
   position: relative;
   padding: 1.5rem 0;
+}
+
+.stat-title::before {
+  content: " ";
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-50);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/*OPORTUNIDADES LABORALES*/
+.timeline {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+  color: var(--color-grey);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  border-left: 1px solid var(--color-grey);
+}
+
+.timeline-item .tl-icon {
+  position: absolute;
+  left: -27px;
+  color: var(--color-grey);
+  top: 0;
+  background-color: var(--color-tree);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timeline-item .tl-icon i {
+  font-size: 1.3rem;
+}
+
+.timeline-item .tl-duration {
+  padding: .2rem .6rem;
+  background-color: var(--color-grey-50);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: .8rem;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=styles.css.map */
