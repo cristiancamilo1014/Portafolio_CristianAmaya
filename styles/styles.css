@@ -14,7 +14,8 @@
   --color-five: #03a64a;
   --color-grey: #e6e6e6;
   --color-black: #000000;
-  --box-shadow-1: 0 3px 10px rgba(0,0,0,.4)
+  --color-grey-50: #e6e6e620;
+  --box-shadow-1: 0 3px 10px rgba(0, 0, 0, .4)
 ;
 }
 
@@ -70,20 +71,20 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
-  background-color: yellow;
+  background-color: var(--color-tree);
 }
 
 .sec4 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
-  background-color: red;
+  background-color: var(--color-five);
 }
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+  -webkit-animation: scaleAnim all .4s ease-in-out;
+          animation: scaleAnim all .4s ease-in-out;
 }
 
 @-webkit-keyframes scaleAnim {
@@ -129,8 +130,8 @@ section {
 
 .controlls .active-btn {
   background-color: var(--color-five) !important;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .controlls .active-btn i {
@@ -282,6 +283,7 @@ section {
 .main-btn .btn-txt {
   padding: 0 1rem;
   font-size: 1.5rem;
+  color: var(--color-grey);
 }
 
 .main-btn .btn-icon {
@@ -331,25 +333,226 @@ section {
 .main-title h2 {
   position: relative;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
+  color: var(--color-grey);
+  font-weight: 400;
 }
 
 .main-title h2 span {
-  color: var(--color-tree);
+  color: var(--color-five);
 }
 
 .main-title h2 .bg-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: var(--color-grey);
+  color: var(--color-grey-50);
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   z-index: -1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-weight: 800;
-  font-size: 6.3rem;
+  font-weight: 600;
+  font-size: 5.1rem;
+}
+
+/*SOBRE MI*/
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-container .right-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-five);
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+}
+
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border: 1px solid var(--color-grey);
+}
+
+.about-container .right-about .about-item .abt-text {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.about-container .right-about .about-item .abt-text .large-text {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-grey);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.about-container .right-about .about-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: var(--color-tree);
+}
+
+.about-container .left-about {
+  padding-right: 5rem;
+}
+
+.about-container .left-about h4 {
+  color: var(--color-five);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.about-container .left-about p {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: var(--color-grey);
+  padding: 1rem 0rem;
+}
+
+/*progress bar*/
+.about-stats {
+  padding-bottom: 4rem;
+}
+
+.about-stats .stat-title {
+  color: var(--color-grey);
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.about-stats .stat-title::before {
+  content: " ";
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-50);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about-stats .progress-bars {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.about-stats .progress-bars .progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-stats .progress-bars .progress-bar .prog-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-grey);
+}
+
+.about-stats .progress-bars .progress-bar .progress-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+  color: var(--color-tree);
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+  width: 100%;
+  height: .45rem;
+  background-color: var(--color-tree);
+  margin-left: 1rem;
+  position: relative;
+  border: 1px solid var(--color-tree);
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-grey);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  width: 60%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+  width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+  width: 50%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 40%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 40%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .git {
+  width: 80%;
+}
+
+.stat-title {
+  color: var(--color-grey);
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  padding: 1.5rem 0;
 }
 /*# sourceMappingURL=styles.css.map */
