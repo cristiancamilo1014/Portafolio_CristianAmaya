@@ -61,19 +61,19 @@ section {
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: var(--color-tow)
+  //background-color: var(--color-tow)
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: var(--color-tree);
+  //background-color: var(--color-tree);
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: var(--color-five);
+  //background-color: var(--color-five);
 }
 
 .active {
@@ -261,36 +261,6 @@ section {
   }
 }
 
-.main-title {
-  text-align: center;
-
-  h2 {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-grey);
-    font-weight: 400;
-
-    span {
-      color: var(--color-five)
-    }
-
-    .bg-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: var(--color-grey-50);
-      transition: all .4s ease-in-out;
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      font-weight: 600;
-      font-size: 5.1rem;
-    }
-  }
-}
-
-
 /*SOBRE MI*/
 .about-container {
   display: grid;
@@ -343,13 +313,6 @@ section {
 
   .left-about {
     padding-right: 5rem;
-
-    h4 {
-      color: var(--color-five);
-      font-size: 2rem;
-      font-weight: 400;
-
-    }
 
     p {
       line-height: 2rem;
@@ -429,36 +392,39 @@ section {
           .git {
             width: 80%;
           }
-          
+
         }
       }
     }
   }
 }
 
-.port-text{
-  padding:  2rem;
+.port-text {
+  padding: 2rem;
   text-align: center;
   font-size: 1.3rem;
   color: var(--color-grey);
   font-weight: 100;
 }
 
-.portfolios{
+.portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  .portfolio-items{
+
+  .portfolio-items {
     position: relative;
     border-radius: 15px;
-    img{
+
+    img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 15px;
     }
-    .hover-item{
+
+    .hover-item {
       width: 100%;
       height: 100%;
       background-color: var(--color-one);
@@ -473,12 +439,14 @@ section {
       opacity: 0;
       transform: scale(0);
       transition: all .4s ease-in-out;
-      h3{
+
+      h3 {
         font-size: 1.5rem;
-        color: var(--color-five);
+        color: var(--color-grey);
         margin-bottom: 1.2rem;
       }
-      .icon{
+
+      .icon {
         background-color: var(--color-grey);
         border-radius: 50%;
         width: 50px;
@@ -489,15 +457,17 @@ section {
         margin: 0 1rem;
         cursor: pointer;
         transition: all .4s ease-in-out;
-        i{
+
+        i {
           font-size: 1.5rem;
           color: var(--color-one);
           margin: 0 1rem;
         }
 
-        &:hover{
+        &:hover {
           background-color: var(--color-five);
-          i{
+
+          i {
             color: var(--color-grey);
           }
         }
@@ -506,7 +476,13 @@ section {
   }
 }
 
-.portfolio-items:hover .hover-item{
+// cCONTACTO
+
+.contac-content-con{
+  
+}
+
+.portfolio-items:hover .hover-item {
   opacity: 1;
   transform: scale(1);
 }
@@ -516,34 +492,39 @@ section {
   color: var(--color-grey);
   font-weight: 400;
   font-size: 2rem;
-  text-align:  center;
+  text-align: center;
   position: relative;
   padding: 1.5rem 0;
+
   &::before {
     content: " ";
+    position: absolute;
     left: 50%;
     top: 0;
     width: 40%;
-    height: 1px;
+    height: 2px;
     background-color: var(--color-grey-50);
-    transform: translateX(-50%);    
-  }    
+    transform: translateX(-50%);
+  }
 }
 
 
 
 /*OPORTUNIDADES LABORALES*/
-.timeline{
+.timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   padding-bottom: 3rem;
   color: var(--color-grey);
-}.timeline-item{
+}
+
+.timeline-item {
   position: relative;
   padding-left: 2.5rem;
   border-left: 1px solid var(--color-grey);
-  .tl-icon{
+
+  .tl-icon {
     position: absolute;
     left: -27px;
     color: var(--color-grey);
@@ -555,11 +536,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    i{
+
+    i {
       font-size: 1.3rem;
     }
   }
-  .tl-duration{
+
+  .tl-duration {
     padding: .2rem .6rem;
     background-color: var(--color-grey-50);
     border-radius: 15px;
@@ -567,14 +550,52 @@ section {
     font-size: 1rem;
     text-transform: uppercase;
   }
-  h5{
+
+  h5 {
     padding: 1rem 0;
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 400;
   }
-  span{
+
+  span {
     color: var(--color-grey);
     font-weight: 100;
   }
+}
+
+.main-title {
+  text-align: center;
+
+  h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-grey);
+    font-weight: 400;
+
+    span {
+      color: var(--color-five)
+    }
+
+    .bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: var(--color-grey-50);
+      transition: all .4s ease-in-out;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      font-size: 5.1rem;
+    }
+  }
+}
+
+h4 {
+  color: var(--color-five);
+  font-size: 2rem;
+  font-weight: 400;
+
 }
