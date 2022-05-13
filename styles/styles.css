@@ -995,13 +995,14 @@ h4 {
   .portfolios {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    padding: 0rem  4rem 0rem  3rem;
+    padding-bottom: 100px;
   }
   .contact-content-con {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 100px;
   }
   .contact-content-con .right-contact {
     margin-left: 0;
